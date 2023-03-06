@@ -98,6 +98,7 @@ body{
   bottom: 0;
   height: 40%;
 }
+
 .desktop-bg{
   display: none;
 }
@@ -258,6 +259,12 @@ body{
       margin-bottom: 0;
       padding-top: 2rem;
 
+    }
+    .desktop-bg{
+      display: block;
+    }
+    .mobile-bg{
+      display: none;
     }
 
 }
