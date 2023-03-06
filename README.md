@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/devhnry/social-proof-page)
-- Live Site URL: [Add live site URL here](https://devhnry.github.io/social-proof-page/)
+- Solution URL: [Github Repo](https://github.com/devhnry/social-proof-page)
+- Live Site URL: [Github Pages](https://devhnry.github.io/social-proof-page/)
 
 ## My process
 
