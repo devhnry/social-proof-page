@@ -73,75 +73,81 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body{
-  background: var(--clr-neutral-200);
+  background: var(--clr-neutral-300);
   font-family: var(--ff-body);
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
+  margin: 16% 7%;
+  
 } 
 
-.bg-pattern{
-  position: absolute;
+.pattern-top,
+.pattern-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 25%;
+  width: 100%; /* set the height to the desired value */
+  background-size: 20px 20px; /* set the size of the pattern */
 }
 
-/* Top Section */
+.pattern-top {
+  top: 0;
+}
+.pattern-bottom {
+  bottom: 0;
+  height: 40%;
+}
+.desktop-bg{
+  display: none;
+}
+
+/* TOP SECTION  */
 
 .top-section{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  padding: 7% 15%;
-
+  text-align: center;
+  color: var(--clr-primary-100);
 }
 
 #main-heading{
-  font-size: 3.5rem;
-  font-weight: var(--fw-bold);
-  color: var(--clr-primary-100);
+  font-size: 2.5rem;
   line-height: 1;
-  margin-right: 6rem;
-
+  padding: 24px;
 }
 
 #heading-text{
-  font-weight: var(--fw-regular);
   color: var(--clr-neutral-100);
-  padding-top: 1rem;
-  padding-right: 10rem;
+  padding: 0 24px 24px;
 }
 
 .rating-section{
-  margin: auto 0;
+  padding: 24px 0;
+  text-align: center;
 }
 
 .rating-box{
-  display: inline-flex;
-  background: var(--clr-neutral-150);
-  padding: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-neutral-200);
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
   border-radius: 8px;
-  width: 80%;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
 }
 
 .star-icon{
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
-.rating-text{
-  padding-top: 0.4rem;
-  padding-left: 1.3rem;
-  font-weight: var(--fw-bold);
-  color: var(--clr-primary-100);
-}
-.rating-box-2{
-  margin-left:  7.5%;
-}
-.rating-box-3{
-  margin-left: 15%;
-}
+
+/* BOTTOM SECTION  */
 
 .bottom-section{
-  /* display: flex; */
-  /* grid-template-columns: repeat(3,1fr); */
-  padding: 1% 15%;
-
+  margin-bottom: 20%;
 }
 
 .customer-box{
@@ -149,9 +155,7 @@ body{
   color: var(--clr-neutral-200);
   border-radius: 8px;
   padding: 2.2rem;
-  margin-right: 1.5rem;
-  width: 30%;
-  float: left;
+  margin-bottom: 12px;
 }
 
 .profile-heading{
@@ -161,7 +165,7 @@ body{
 }
 
 .profile-pic{
-  width: 18%;
+  width: 46px;
   border-radius: 100%;
   margin-right: 1.3rem;
 }
@@ -170,10 +174,115 @@ body{
   color: var(--clr-primary-200);
 }
 
-.customer-2{
-  margin-top: 24px;
+@media (min-width: 800px){
+  body{
+    margin: 6% 7%;
+  }
+
+  .top-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: left;
+  }
+
+  #main-heading{
+    font-size: 2.8rem;
+    padding-right: 32px;
+  }
+
+  #heading-text{
+    padding: 0 48px 24px 24px;
+  }
+
+  .bottom-section{
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+
+  }
+
+  .rating-box{
+    display: flex;
+    flex-direction: row;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .rating-text{
+    padding: 1% 0 0 3%;
+  }
 }
 
-.customer-3{
-  margin-top: 48px;
+  @media (min-width: 1024px){
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 6% 7%;
+      height: 700px;
+    }
+
+    #main-heading{
+      font-size: 3.5rem;
+    }
+
+    .rating-box{
+      width: 80%;
+      display: inline-flex;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .rating-box-2{
+      margin-left: 10%;
+    }
+
+    .rating-box-3{
+      margin-left: 20%;
+    }
+
+    .customer-box{
+      width: 30%;
+      float: inline-start;
+      margin-left: 24px;
+    }
+
+    .customer-2{
+      margin-top: 24px;
+    }
+    .customer-3{
+      margin-top: 48px;
+    }
+
+    .bottom-section{
+      margin-bottom: 0;
+      padding-top: 2rem;
+
+    }
+
+}
+
+@media (min-width: 1276px){
+  body{
+    margin: 6% 10%;
+  }
+  #main-heading{
+    font-size: 3.5rem;
+    padding-right: 6rem;
+  }
+  #heading-text{
+    width: 450px;
+  }
+  .rating-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .rating-box{
+    width: 70%;
+  }
+
+  .bottom-section{
+    padding-top: 2rem;
+  }
 }
